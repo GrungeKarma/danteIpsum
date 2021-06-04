@@ -154,15 +154,6 @@ const myMiddleware = (request, response, next) => {
 app.use(myMiddleware); // use the myMiddleware for every request to the app
 app.use(express.json());
 
-app
-  .route("/test")
-  .get((request, response) => {
-    response.send("HELLO WORLD");
-  })
-  .post((request, response) => {
-    response.json(request.body);
-  });
-
   app
   .route("/random_passage")
   .get((request, response) => {
