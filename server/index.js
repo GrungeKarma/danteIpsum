@@ -1,3 +1,6 @@
+require("dotenv").config();
+const express = require("express");
+
 const danteIpsumArr = [
   "Midway upon the journey of our life",
   "I found myself within a forest dark,",
@@ -136,3 +139,48 @@ const danteIpsumArr = [
   "And those thou makest so disconsolate.”",
   "Then he moved on, and I behind him followed.",
 ];
+let danteIpsumArr2 = danteIpsumArr.slice();
+let danteIpsumArr3 = danteIpsumArr.slice();
+let danteIpsumArr4 = danteIpsumArr.slice();
+
+const app = express();
+
+const myMiddleware = (request, response, next) => {
+  // do something with request and/or response
+  console.log(request.method, request.path);
+  next(); // tell express to move to the next middleware function
+};
+
+app.use(myMiddleware); // use the myMiddleware for every request to the app
+app.use(express.json());
+
+app
+  .route("/test")
+  .get((request, response) => {
+    response.send("HELLO WORLD");
+  })
+  .post((request, response) => {
+    response.json(request.body);
+  });
+
+  app
+  .route("/random_passage")
+  .get((request, response) => {
+    const randomValue = (list) => {
+      return list[Math.floor(Math.random() * list.length)]
+    };
+  let value = randomValue(danteIpsumArr);
+  let value2 = randomValue(danteIpsumArr2);
+  let value3 = randomValue(danteIpsumArr3);
+  let value4 = randomValue(danteIpsumArr4);
+  let finalValue = `${value} ${value2} ${value3} ${value4}`;
+  console.log(finalValue);
+    response.send(finalValue);
+  });
+
+app.route("/**").get((request, response) => {
+  response.status(404).json({ message: "Not Found" });
+});
+
+const PORT = process.env.PORT || 4040;
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
