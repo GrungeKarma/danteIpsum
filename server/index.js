@@ -139,6 +139,7 @@ const danteIpsumArr = [
   {id: "135" ,  body: "And those thou makest so disconsolate.”"},
   {id: "136" ,  body: "Then he moved on, and I behind him followed."}
 ];
+
 let danteIpsumArr2 = danteIpsumArr.slice();
 let danteIpsumArr3 = danteIpsumArr.slice();
 let danteIpsumArr4 = danteIpsumArr.slice();
@@ -153,6 +154,28 @@ const myMiddleware = (request, response, next) => {
 
 app.use(myMiddleware); // use the myMiddleware for every request to the app
 app.use(express.json());
+
+app
+.route("/list_passages").get((request,response) => {
+  let passageList = danteIpsumArr;
+
+  response.status(200).json(passageList);
+});
+
+app
+.route("/get_passage/:id").get((request,response) => {
+  const id = request.params.id;
+
+  let finalAnswer = [];
+
+    let answer = danteIpsumArr.forEach(element =>{
+      if (element.id === id){
+        console.log (element);
+        finalAnswer.push(element);
+      }
+        });
+  response.status(200).json(finalAnswer);
+});
 
   app
   .route("/random_passage_generator")
@@ -170,27 +193,6 @@ app.use(express.json());
 
   response.status(200).json({genRandomPassage});
   });
-
-app.route("/list_passages").get((request,response) => {
-  let passageList = danteIpsumArr;
-
-  response.status(200).json(passageList);
-});
-
-app.route("/get_passage/:id").get((request,response) => {
-  const id = request.params.id;
-
-  let finalAnswer = [];
-
-    let answer = danteIpsumArr.forEach(element =>{
-      if (element.id === id){
-        console.log (element);
-        finalAnswer.push(element);
-      }
-        });
-  response.status(200).json(finalAnswer);
-
-});
 
 app.route("/**").get((request, response) => {
   response.status(404).json({ message: "Not Found" });
