@@ -8,7 +8,10 @@
 
 ## **API Paths:**
 
-### *```/random_passage_generator```* : This path will return an object that contains randomly generated dummy text from four random lines of the first act.
+### *```/random_passage_generator/:num```* : This path will return an object that contains randomly generated dummy text from the first act. The path requires a number at the end. For instance,  ```/random_passage_generator/1  will return an object containing one random passage.
+
+### *Acceptable Numbers*
+  ```1, 5, 10, 15, 20```
 
 ### *```/list_passages```* : This path will return an object that contains all the lines of the first act with their unique ids.
 
