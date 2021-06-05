@@ -8,7 +8,7 @@
 
 ## **API Paths:**
 
-### *```/random_passage_generator```* : This path will return an objet that contains randomly generated dummy text from four random lines of the first act.
+### *```/random_passage_generator```* : This path will return an object that contains randomly generated dummy text from four random lines of the first act.
 
 ### *```/list_passages```* : This path will return an object that contains all the lines of the first act with their unique ids.
 
