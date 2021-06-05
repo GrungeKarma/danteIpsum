@@ -196,19 +196,56 @@ app
   app
   .route("/random_passage_generator/:num")
   .get((request, response) => {
+    const num = request.params.num;
+
     const randomValue = (list) => {
-      return list[Math.floor(Math.random() * list.length)]
-    };
-    if
+      return list[Math.floor(Math.random() * list.length)]};
+
   let value = randomValue(danteIpsumArr);
   let value2 = randomValue(danteIpsumArr2);
   let value3 = randomValue(danteIpsumArr3);
   let value4 = randomValue(danteIpsumArr4);
-  let genRandomPassage = `${value.body} ${value2.body} ${value3.body} ${value4.body}`;
-  console.log(genRandomPassage);
+  let value5 = randomValue(danteIpsumArr5);
+  let value6 = randomValue(danteIpsumArr6);
+  let value7 = randomValue(danteIpsumArr7);
+  let value8 = randomValue(danteIpsumArr8);
+  let value9 = randomValue(danteIpsumArr9);
+  let value10 = randomValue(danteIpsumArr10);
+  let value11 = randomValue(danteIpsumArr11);
+  let value12 = randomValue(danteIpsumArr12);
+  let value13 = randomValue(danteIpsumArr13);
+  let value14 = randomValue(danteIpsumArr14);
+  let value15 = randomValue(danteIpsumArr15);
+  let value16 = randomValue(danteIpsumArr16);
+  let value17 = randomValue(danteIpsumArr17);
+  let value18 = randomValue(danteIpsumArr18);
+  let value19 = randomValue(danteIpsumArr19);
+  let value20 = randomValue(danteIpsumArr20);
 
+  let genRandomPassage = value.body;
+
+  let genRandomPassage5 = `${value.body} ${value2.body} ${value3.body} ${value4.body} ${value5.body}`;
+
+  let genRandomPassage10 = `${value.body} ${value2.body} ${value3.body} ${value4.body} ${value5.body} ${value6.body} ${value7.body} ${value8.body} ${value9.body} ${value10.body}`;
+
+  let genRandomPassage15 = `${value.body} ${value2.body} ${value3.body} ${value4.body} ${value5.body} ${value6.body} ${value7.body} ${value8.body} ${value9.body} ${value10.body} ${value11.body} ${value12.body} ${value13.body} ${value14.body} ${value15.body}`;
+
+  let genRandomPassage20 = `${value.body} ${value2.body} ${value3.body} ${value4.body} ${value5.body} ${value6.body} ${value7.body} ${value8.body} ${value9.body} ${value10.body} ${value11.body} ${value12.body} ${value13.body} ${value14.body} ${value15.body} ${value16.body} ${value17.body} ${value18.body} ${value19.body} ${value20.body}`;
+
+  if (num === "1") {
   response.status(200).json({genRandomPassage});
-  });
+  }else if (num === "5") {
+    response.status(200).json({genRandomPassage5});
+    }else if (num === "10") {
+      response.status(200).json({genRandomPassage10});
+      }else if (num === "15") {
+        response.status(200).json({genRandomPassage15});
+        }else if (num === "20"){
+          response.status(200).json({genRandomPassage20});
+        } else {
+          response.status(404).json("Something Went Wrong");
+        }
+});
 
 app.route("/**").get((request, response) => {
   response.status(404).json({ message: "Not Found" });
