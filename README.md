@@ -3,7 +3,7 @@
 ### **Audience:** The audience for this API is programers that are tired of using Lorum Ipsum text. Those who are looking for a more engageing dummy text and appricate classic litrature can find novelty in this project.
 
 
-### **Definition Statement**: Dante Ipsum is API that provides an alternative dummy text to Lorum Ipsum. This API used an open domain version of the first three sections of  Dante Alighieri's epic poem Divine Comedy. The selection is separated by line. The dummy text is formed by randomly picking lines from the selection and combining them into a small paragraph.
+### **Definition Statement**: Dante Ipsum is a RESTfull API that provides an alternative dummy text to Lorum Ipsum. This API used an open domain version of the first three sections of  Dante Alighieri's epic poem Divine Comedy. The selection is separated by line. The dummy text is formed by randomly picking lines from the selection and combining them into a small paragraph.
 
 
 ## *API Paths:*
