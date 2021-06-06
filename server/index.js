@@ -438,6 +438,25 @@ let danteIpsumArr17 = danteIpsumArr.slice();
 let danteIpsumArr18 = danteIpsumArr.slice();
 let danteIpsumArr19 = danteIpsumArr.slice();
 let danteIpsumArr20 = danteIpsumArr.slice();
+let danteIpsumArr21 = danteIpsumArr.slice();
+let danteIpsumArr22 = danteIpsumArr.slice();
+let danteIpsumArr23 = danteIpsumArr.slice();
+let danteIpsumArr24 = danteIpsumArr.slice();
+let danteIpsumArr25 = danteIpsumArr.slice();
+let danteIpsumArr26 = danteIpsumArr.slice();
+let danteIpsumArr27 = danteIpsumArr.slice();
+let danteIpsumArr28 = danteIpsumArr.slice();
+let danteIpsumArr29 = danteIpsumArr.slice();
+let danteIpsumArr30 = danteIpsumArr.slice();
+let danteIpsumArr31 = danteIpsumArr.slice();
+let danteIpsumArr32 = danteIpsumArr.slice();
+let danteIpsumArr33 = danteIpsumArr.slice();
+let danteIpsumArr34 = danteIpsumArr.slice();
+let danteIpsumArr35 = danteIpsumArr.slice();
+let danteIpsumArr36 = danteIpsumArr.slice();
+let danteIpsumArr37 = danteIpsumArr.slice();
+let danteIpsumArr38 = danteIpsumArr.slice();
+let danteIpsumArr39 = danteIpsumArr.slice();
 
 const app = express();
 
@@ -500,6 +519,26 @@ app
   let value18 = randomValue(danteIpsumArr18);
   let value19 = randomValue(danteIpsumArr19);
   let value20 = randomValue(danteIpsumArr20);
+  let value21 = randomValue(danteIpsumArr21);
+  let value22 = randomValue(danteIpsumArr22);
+  let value23 = randomValue(danteIpsumArr23);
+  let value24 = randomValue(danteIpsumArr24);
+  let value25 = randomValue(danteIpsumArr25);
+  let value26 = randomValue(danteIpsumArr26);
+  let value27 = randomValue(danteIpsumArr27);
+  let value28 = randomValue(danteIpsumArr28);
+  let value29 = randomValue(danteIpsumArr29);
+  let value30 = randomValue(danteIpsumArr30);
+  let value31 = randomValue(danteIpsumArr31);
+  let value32 = randomValue(danteIpsumArr32);
+  let value33 = randomValue(danteIpsumArr33);
+  let value34 = randomValue(danteIpsumArr34);
+  let value35 = randomValue(danteIpsumArr35);
+  let value36 = randomValue(danteIpsumArr36);
+  let value37 = randomValue(danteIpsumArr37);
+  let value38 = randomValue(danteIpsumArr38);
+  let value39 = randomValue(danteIpsumArr39);
+
 
   let genRandomPassage = value.body;
 
@@ -511,6 +550,8 @@ app
 
   let genRandomPassage20 = `${value.body} ${value2.body} ${value3.body} ${value4.body} ${value5.body} ${value6.body} ${value7.body} ${value8.body} ${value9.body} ${value10.body} ${value11.body} ${value12.body} ${value13.body} ${value14.body} ${value15.body} ${value16.body} ${value17.body} ${value18.body} ${value19.body} ${value20.body}`;
 
+  let genRandomPassage40 = `${value.body} ${value2.body} ${value3.body} ${value4.body} ${value5.body} ${value6.body} ${value7.body} ${value8.body} ${value9.body} ${value10.body} ${value11.body} ${value12.body} ${value13.body} ${value14.body} ${value15.body} ${value16.body} ${value17.body} ${value18.body} ${value19.body} ${value20.body}${value21.body} ${value22.body} ${value23.body} ${value24.body} ${value25.body} ${value26.body} ${value27.body} ${value28.body} ${value29.body} ${value30.body} ${value31.body} ${value32.body} ${value33.body} ${value34.body} ${value35.body} ${value36.body} ${value37.body} ${value38.body} ${value39.body}`;
+
   if (num === "1") {
   response.status(200).json({genRandomPassage});
   }else if (num === "5") {
@@ -521,9 +562,11 @@ app
         response.status(200).json({genRandomPassage15});
         }else if (num === "20"){
           response.status(200).json({genRandomPassage20});
-        } else {
-          response.status(404).json("Something Went Wrong");
-        }
+          } else if (num === "40"){
+            response.status(200).json({genRandomPassage40});
+            } else {
+              response.status(404).json("Something Went Wrong");
+              }
 });
 
 app.route("/**").get((request, response) => {
