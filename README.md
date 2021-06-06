@@ -6,7 +6,7 @@
 ### **Definition Statement**: Dante Ipsum is API that provides an alternative dummy text to Lorum Ipsum. This API used an open domain version of the first act of Dante Alighieri's epic poem Divine Comedy. The act is separated by line. The dummy text is formed by randomly picking lines from the first act and combining them into a small paragraph.
 
 
-## **API Paths:**
+## *API Paths:*
 
 ### *```/random_passage_generator/:num```*  : This path will return an object that contains randomly generated dummy text from the first act. The path requires a number at the end. For instance,  ```/random_passage_generator/1```  will return an object containing one random passage.
 
