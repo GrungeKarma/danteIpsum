@@ -15,6 +15,6 @@
 ### *Acceptable Numbers:*
   ```1, 5, 10, 15, 20, 40```
 
-### *```"/list_passages"```* : This path will return an object that contains all the lines of the first act with their unique ids.
+### *```"/list_passages"```* : This path will return an object that contains all the lines of the first three sections with their unique ids.
 
 ### *```"/get_passage/:id"```* : This path will return an object that corresponds with the id number you use at the end of the call (ex.the call ```"/get_passage/1"``` will return the first passage in the data set.) If you would like to pull a specific passage use the ```"/list_passages"``` call to see which passage is assigned to which id.
