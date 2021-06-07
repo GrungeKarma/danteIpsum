@@ -3,12 +3,12 @@
 ### **Audience:** The audience for this API is programers that are tired of using Lorum Ipsum text. Those who are looking for a more engageing dummy text and appricate classic litrature can find novelty in this project.
 
 
-### **Definition Statement**: Dante Ipsum is API that provides an alternative dummy text to Lorum Ipsum. This API used an open domain version of the first three sections of  Dante Alighieri's epic poem Divine Comedy. The selection is separated by line. The dummy text is formed by randomly picking lines from the selection and combining them into a small paragraph.
+### **Definition Statement**: Dante Ipsum is a RESTfull API that provides an alternative dummy text to Lorum Ipsum. This API used an open domain version of the first three sections of  Dante Alighieri's epic poem Divine Comedy. The selection is separated by line. The dummy text is formed by randomly picking lines from the selection and combining them into a small paragraph.
 
 
 ## *API Paths:*
 
-### *```"/random_passage_generator/:num"```*  : This path will return an object that contains randomly generated dummy text from the first act. The path requires a number at the end. For instance,  ```/random_passage_generator/1```  will return an object containing one random passage.
+### *```"/random_passage_generator/:num"```*  : This path will return an object that contains randomly generated dummy text from the selected text. The path requires a number at the end. For instance,  ```/random_passage_generator/1```  will return an object containing one random passage.
 
 ### *Acceptable Numbers:*
   ```1, 5, 10, 15, 20, 40```
